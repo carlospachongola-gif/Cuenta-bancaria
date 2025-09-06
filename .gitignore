@@ -1,25 +1,29 @@
-public class CuentaBancaria {
-    private double saldo;
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-    public void depositar(double monto) {
-        saldo = saldo + monto;
-    }
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-    public void retirar(double monto) {
-        if (monto <= saldo) {
-            saldo = saldo - monto;
-        }
-    }
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-    public double getSaldo() {
-        return saldo;
-}
-}
-public class Main {
-    public static void main(String[] args) {
-        CuentaBancaria cuenta = new CuentaBancaria();
-        cuenta.depositar(500);
-        cuenta.retirar(200);
-        System.out.println("Saldo: " + cuenta.getSaldo());
-}
-}
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
