@@ -1,8 +1,25 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+public class CuentaBancaria {
+    private double saldo;
+
+    public void depositar(double monto) {
+        saldo = saldo + monto;
+    }
+
+    public void retirar(double monto) {
+        if (monto <= saldo) {
+            saldo = saldo - monto;
+        }
+    }
+
+    public double getSaldo() {
+        return saldo;
+}
+}
+public class Main {
+    public static void main(String[] args) {
+        CuentaBancaria cuenta = new CuentaBancaria();
+        cuenta.depositar(500);
+        cuenta.retirar(200);
+        System.out.println("Saldo: " + cuenta.getSaldo());
+}
+}
